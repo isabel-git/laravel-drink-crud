@@ -17,5 +17,21 @@ class DrinkController extends Controller
 
         $drink = Drink::findOrFail($id);
         return view('pages.drink-show', compact('drink'));
+    }
+    public function create() {
+
+        return view('pages.drink-create');
+    }
+    public function store(Request $request) {
+
+        $newDrink = new Drink;
+
+        $newDrink -> name = $request -> get('name'); 
+        $newDrink -> degres = $request -> get('degres');
+        $newDrink -> price = $request -> get('price');
+
+        $newDrink -> save();
+
+        return redirect() -> route('index');
     } 
 }
