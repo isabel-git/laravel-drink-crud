@@ -1,0 +1,24 @@
+body {
+  background-color: #eff8ff;
+  margin: auto 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body header {
+  background-color: #ffe5b9;
+}
+
+body header,
+body footer {
+  padding: 50px 0;
+}
+
+body li {
+  list-style: none;
+}
+
+body footer {
+  background-color: #94bfd5;
+}
+

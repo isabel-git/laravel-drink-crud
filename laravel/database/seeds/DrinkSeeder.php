@@ -13,6 +13,6 @@ class DrinkSeeder extends Seeder
      */
     public function run()
     {
-        factory(Drink::class, 10) -> create();
+        factory(Drink::class, 20) -> create();
     }
 }
