@@ -24,13 +24,13 @@ class DrinkController extends Controller
     }
     public function store(Request $request) {
 
-        // $newDrink = new Drink;
+        $newDrink = new Drink;
 
-        // $newDrink -> name = $request -> get('name'); 
-        // $newDrink -> degres = $request -> get('degres');
-        // $newDrink -> price = $request -> get('price');
+        $newDrink -> name = $request -> get('name'); 
+        $newDrink -> degres = $request -> get('degres');
+        $newDrink -> price = $request -> get('price');
 
-        // $newDrink -> save();
+        $newDrink -> save();
 
         // dd($newDrink);
         // $newDrink = Drink::create($request -> all());
