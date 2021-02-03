@@ -5,9 +5,9 @@
 
     <ul>
 
-        <li>{{$drink -> name}}</li>
-        <li>{{$drink -> degres}}</li>
-        <li>{{$drink -> price}}</li>
+        <li>Nome: {{$drink -> name}}</li>
+        <li>Gradi Alcol: {{$drink -> degres}}</li>
+        <li>Prezzo: {{$drink -> price}}$</li>
 
     </ul>
 @endsection

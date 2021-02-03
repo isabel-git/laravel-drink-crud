@@ -24,14 +24,37 @@ class DrinkController extends Controller
     }
     public function store(Request $request) {
 
-        $newDrink = new Drink;
+        // $newDrink = new Drink;
 
-        $newDrink -> name = $request -> get('name'); 
-        $newDrink -> degres = $request -> get('degres');
-        $newDrink -> price = $request -> get('price');
+        // $newDrink -> name = $request -> get('name'); 
+        // $newDrink -> degres = $request -> get('degres');
+        // $newDrink -> price = $request -> get('price');
 
-        $newDrink -> save();
+        // $newDrink -> save();
 
-        return redirect() -> route('index');
+        // dd($newDrink);
+        // $newDrink = Drink::create($request -> all());
+        return redirect() -> route('show', $newDrink -> id);
     } 
+    public function edit($id) {
+
+        $drink = Drink::findOrFail($id);
+        return view('pages.drink-edit', compact('drink'));
+    }
+    public function update(Request $request, $id) {
+
+        // dd($request -> all(), $id);
+        $drink = Drink::findOrFail($id);
+        $drink -> update($request -> all());
+
+        return redirect() -> route('show', $drink -> id);
+
+    }
+    public function delete($id) {
+
+        $drink = Drink::findOrFail($id);
+        $drink -> delete();
+        
+        return redirect() -> route('index');
+    }
 }
