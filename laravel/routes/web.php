@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/index', 'DrinkController@index') -> name('index');
+Route::get('/show/{id}', 'DrinkController@show') -> name('show');

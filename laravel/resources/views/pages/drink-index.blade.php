@@ -6,7 +6,9 @@
     <ul>
 
         @foreach ($drinks as $drink)
-            <li>{{$drink -> name}}</li>
+            <a href="{{ route('show', $drink -> id) }}">
+                <li>{{$drink -> name}}</li>   
+            </a>
         @endforeach
 
     </ul>
